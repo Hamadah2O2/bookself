@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: Raleway, sans-serif;
+    box-sizing: border-box;
+}
+
+input, button {
+  border: none;
+  outline: none;
+}
+button {
+    cursor: pointer;
+}
+
+/* header  */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d5dddd;
+  padding: 10px 12px;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul button.plus {
+  background-color: aliceblue;
+  padding: 9px;
+  border-radius: 12px;
+  transition: 0.1s;
+  display: grid;
+  place-items: center;
+}
+
+header nav ul button:hover {
+  color: white;
+  background-color: #99d0ff;
+}
+header nav div.search {
+  margin-inline: 12px;
+}
+
+header nav div.search form{
+  display: flex;
+  width: 100%;
+}
+header nav div.search input[name="search"] {
+  padding: 10px 20px;
+  height: 35px;
+  border-radius: 12px 0px 0px 12px;
+  /* max-width: 300px; */
+  width: calc(10vw + 10em);
+}
+header nav div.search input[name="search"]:focus{
+  outline: none;
+  border-radius: 12px 0 0 12px;
+  border: 1px solid #99d0ff;
+}
+nav div.search button {
+  border-radius: 0 12px 12px 0;
+  padding: 0 12px;
+}
+nav div.search button:hover {
+  background: #e6e6e6;
+}
+header nav div.search button svg {
+  width: 20px;
+}
+header nav span {
+  font-size: 0.7rem;
+  color: #00000075;
+}
+
+/* main */
+main * {
+  /* border: 1px solid; */
+}
+
+main .container {
+  padding: 12px 5vw;
+}
+main .container .section {
+  background-color: #fcfcfc;
+  padding: 16px;
+  margin-bottom: 2em;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 20%);
+}
+main .container .section h2 {
+  margin-bottom: 12px;
+}
+main .container .section .card-list{
+  display:grid;
+  grid-template-columns: repeat(auto-fill ,minmax(250px,1fr)); 
+  gap:10px;
+}
+
+.card-list .card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 14px 16px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 10%);
+}
+.card-list .card button:nth-of-type(1){
+  margin-left: auto;
+}
+.card-list .card button {
+  margin-left: 5px;
+  padding: 7px;
+  height: min-content;
+  display: grid;
+  border-radius: 200px;
+  place-items: center;
+  transition: 0.1s;
+}
+.card-list .card button:hover {
+  background-color: #99d0ff;
+  color: white;
+}
+
+/* modal */
+
+.modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background-color: rgba(0, 0, 0, 20%);
+  height: 100vh;
+  width: 100%;
+  transition: 1.5s ease-in-out;
+}
+.modal-container.show {
+  display: grid;
+  place-items: center;
+}
+
+.modal {
+  position: relative;
+  max-width: 500px;
+  width: auto;
+  padding: 15px;
+  background-color: white;
+  border-radius: 12px;
+}
+
+.modal .title {
+  text-align: center;
+}
+
+.modal button.close{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+}
+
+.modal form{
+  position: relative;
+}
+
+.modal input[type="text"] {
+  outline: none;
+  padding: 10px 20px;
+  height: 35px;
+  width: 100%;
+  border-radius: 5px ;
+  border: 2px solid rgba(0, 0, 0, 20%);
+  margin-bottom: 12px;
+  /* max-width: 300px; */
+}
+.modal input[type="text"]:focus {
+  border-color: #99d0ff;
+}
+
+.modal button.submit {
+  display: block;
+  margin-left: auto;
+  padding: 10px 14px;
+  border-radius: 9px;
+  transition: 0.1s;
+}
+.modal button.submit:hover {
+  background-color: #99d0ff;
+  color: white;
+}
